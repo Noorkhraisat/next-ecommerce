@@ -15,7 +15,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
   const { cartItems } = useSelector((state: RootState)  => state.cart);
   const arrayPaths = ['/'];  
 
-  const [onTop, setOnTop] = useState(( !arrayPaths.includes(router.pathname) || isErrorPage ) ? false : true);
+  const [onTop, setOnTop] = useState(( !!arrayPaths.includes(router.pathname) || isErrorPage ) ? false : true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const navRef = useRef(null);
@@ -30,7 +30,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
   }
 
   useEffect(() => {
-    if(!arrayPaths.includes(router.pathname) || isErrorPage) {
+    if(!!arrayPaths.includes(router.pathname) || isErrorPage) {
       return;
     }
 
@@ -53,18 +53,12 @@ const Header = ({ isErrorPage }: HeaderType) => {
   useOnClickOutside(searchRef, closeSearch);
 
   return(
-    <header className={`site-header ${!onTop ? 'site-header--fixed' : ''}`}>
+    <header className={`site-header site-header--fixed`}>
       <div className="container">
         <Link href="/">
           <a><h1 className="site-logo"><Logo />E-Shop</h1></a>
         </Link>
         <nav ref={navRef} className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`}>
-          <Link href="/products">
-            <a>Products</a>
-          </Link>
-          <a href="#">Inspiration</a>
-          <a href="#">Rooms</a>
-          <button className="site-nav__btn"><p>Account</p></button>
         </nav>
 
         <div className="site-header__actions">
@@ -83,9 +77,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
               }
             </button>
           </Link>
-          <Link href="/login">
-            <button className="site-header__btn-avatar"><i className="icon-avatar"></i></button>
-          </Link>
+        
           <button 
             onClick={() => setMenuOpen(true)} 
             className="site-header__btn-menu">

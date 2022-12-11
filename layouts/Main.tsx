@@ -19,7 +19,7 @@ export default ({ children, title = 'Next.js Ecommerce' }: LayoutType) => {
 
       <Header />
 
-      <main className={(pathname !== '/' ? 'main-page' : '')}>
+      <main className={(pathname == '/' ? 'main-page' : '')}>
         { children }
       </main>
     </div>

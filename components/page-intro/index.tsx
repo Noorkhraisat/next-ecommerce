@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {EffectFade, Navigation} from 'swiper';
+import React from 'react'
 
 SwiperCore.use([EffectFade, Navigation]);
 
@@ -9,13 +10,8 @@ const PageIntro = () => {
     <section className="page-intro">  
       <Swiper navigation effect="fade" className="swiper-wrapper">
         <SwiperSlide>
-          <div className="page-intro__slide" style={{ backgroundImage: "url('/images/slide-1.jpg')" }}>
-            <div className="container">
-              <div className="page-intro__slide__content">
-                <h2>Sale of the summer collection</h2>
-                <a href="#" className="btn-shop"><i className="icon-right"></i>Shop now</a>
-              </div>
-            </div>
+          <div className="page-intro__slide" style={{ backgroundImage: "url('https://scontent.famm4-2.fna.fbcdn.net/v/t1.6435-9/47386184_1160312877465527_6300025271504338944_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=Evdyysl6JC8AX_XMA2L&_nc_ht=scontent.famm4-2.fna&oh=00_AfDR1jP18ldMp37Em6G2aY9qSJEAiCapqe8o-7ELeP3yZw&oe=63BD0D15')" }}>
+           
           </div>
         </SwiperSlide>
 

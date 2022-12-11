@@ -490,6 +490,7 @@ h1,h2,h3,h4,h5 {
 
 .page-intro {
   position: relative;
+  height: 600px;
   .swiper-button-prev, .swiper-button-next {
     bottom: 20px;
     top: auto;
@@ -2653,7 +2654,7 @@ h1,h2,h3,h4,h5 {
 
 .checkout-content {
   display: flex;
-  flex-wrap: wrap;
+  width: 100%;
   justify-content: space-between;
   .block {
     margin-bottom: 48px;
@@ -2666,6 +2667,15 @@ h1,h2,h3,h4,h5 {
     .btn {
       width: 125px;
       margin-right: 11px;
+    }
+  }
+  .checkout__col-6 {
+    width: 100%;
+    @include breakpoint(tablet-lg) {
+      width: 53%;
+    }
+    @include breakpoint(desktop-lg) {
+      width: 41%;
     }
   }
   .checkout__col-6 {

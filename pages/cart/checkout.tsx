@@ -26,11 +26,7 @@ const CheckoutPage = () => {
           </div>
 
           <div className="checkout-content">
-            <div className="checkout__col-6">
-              <div className="checkout__btns">
-                <button className="btn btn--rounded btn--yellow">Log in</button>
-                <button className="btn btn--rounded btn--border">Sign up</button>
-              </div>
+            <div className="checkout__col-8">
 
               <div className="block">
                 <h3 className="block__title">Shipping information</h3>
@@ -85,54 +81,6 @@ const CheckoutPage = () => {
             
             <div className="checkout__col-4">
               <div className="block">
-                <h3 className="block__title">Payment method</h3>
-                <ul className="round-options round-options--three">
-                  <li className="round-item">
-                    <img src="/images/logos/paypal.png" alt="Paypal" />
-                  </li>
-                  <li className="round-item">
-                    <img src="/images/logos/visa.png" alt="Paypal" />
-                  </li>
-                  <li className="round-item">
-                    <img src="/images/logos/mastercard.png" alt="Paypal" />
-                  </li>
-                  <li className="round-item">
-                    <img src="/images/logos/maestro.png" alt="Paypal" />
-                  </li>
-                  <li className="round-item">
-                    <img src="/images/logos/discover.png" alt="Paypal" />
-                  </li>
-                  <li className="round-item">
-                    <img src="/images/logos/ideal-logo.svg" alt="Paypal" />
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="block">
-                <h3 className="block__title">Delivery method</h3>
-                <ul className="round-options round-options--two">
-                  <li className="round-item round-item--bg">
-                    <img src="/images/logos/inpost.svg" alt="Paypal" />
-                    <p>$20.00</p>
-                  </li>
-                  <li className="round-item round-item--bg">
-                    <img src="/images/logos/dpd.svg" alt="Paypal" />
-                    <p>$12.00</p>
-                  </li>
-                  <li className="round-item round-item--bg">
-                    <img src="/images/logos/dhl.svg" alt="Paypal" />
-                    <p>$15.00</p>
-                  </li>
-                  <li className="round-item round-item--bg">
-                    <img src="/images/logos/maestro.png" alt="Paypal" />
-                    <p>$10.00</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="checkout__col-2">
-              <div className="block">
                 <h3 className="block__title">Your cart</h3>
                 <CheckoutItems />
                 
@@ -148,7 +96,7 @@ const CheckoutPage = () => {
             <a href="/cart" className="cart__btn-back"><i className="icon-left"></i> Back</a>
             <div className="cart-actions__items-wrapper">
               <button type="button" className="btn btn--rounded btn--border">Continue shopping</button>
-              <button type="button" className="btn btn--rounded btn--yellow">Proceed to payment</button>
+              <button type="button" className="btn btn--rounded btn--yellow">submit</button>
             </div>
           </div>
         </div>
